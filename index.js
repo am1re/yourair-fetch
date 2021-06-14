@@ -8,7 +8,7 @@ connect("mongodb+srv://dbUser:Lw0wwRiysffGOams@cluster0.vxgoq.mongodb.net/yourai
     .then(() => {
         const app = express()
         app.use('/', indexRouter)
-        app.listen(5001, () => {
+        app.listen(process.env.PORT || 5001, () => {
             console.log("Fetch service started! Health chcek localhost:5001/health")
         })
 
